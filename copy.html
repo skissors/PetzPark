@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				background-image: url(wallpaper/16_PAWZ.png);
+				color: white;
+				font-family: Comic Sans MS;
+				margin: auto;
+				text-align: center;
+
+				width: 100vw;
+				height: 100vh;
+				min-height: 100vh;
+
+				box-sizing: border-box;
+				border: 2px white inset;
+				position: relative;
+			}
+
+            .wrapper {
+                
+            }
+
+
+			.grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: center;
+				justify-content: center;
+				gap: 50px;
+				margin: auto;
+				max-width: 900px;
+			}
+			.title {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			.title div {
+				padding: 0 5px;
+			}
+			.pet-image {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.info {
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				bottom: 0;
+			}
+			.owner {
+				font-size: 10px;
+			}
+
+			.text-outline {
+				text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989993px 0.14112px 0px,
+					rgb(0, 0, 0) -0.653644px -0.756803px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279416px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">A Window With Stuff In It</div>
+					<div class="title-bar-controls">
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+				<div class="window-body">
+					<p>There's so much room for activities!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title">
+			<div class="text-outline">Petz Park</div>
+			<div class="text-outline">today's visitor</div>
+		</div>
+		<div class="pet-image">
+			<img src="https://oodlecat.meowandsparkle.party/petz-data/petz/dogz/hexed/bodolf/bodolf.png" />
+		</div>
+		<div class="info">
+			<div class="text-outline">Jack</div>
+			<div class="owner text-outline">owned by skissors@Alive Enough</div>
+		</div>
+
+		<script>
+			var isInIframe = parent !== window;
+			console.log(isInIframe);
+			var referrer = document.referrer;
+			console.log(referrer);
+
+			// https://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript
+			String.prototype.hashCode = function () {
+				var hash = 0,
+					i,
+					chr;
+				if (this.length === 0) return hash;
+				for (i = 0; i < this.length; i++) {
+					chr = this.charCodeAt(i);
+					hash = (hash << 5) - hash + chr;
+					hash |= 0; // Convert to 32bit integer
+				}
+				return hash;
+			};
+
+			// from https://stackoverflow.com/questions/424292/seedable-javascript-random-number-generator
+			function SeedRandom(state1, state2) {
+				var mod1 = 4294967087;
+				var mul1 = 65539;
+				var mod2 = 4294965887;
+				var mul2 = 65537;
+				if (typeof state1 != "number") {
+					state1 = +new Date();
+				}
+				if (typeof state2 != "number") {
+					state2 = state1;
+				}
+				state1 = (state1 % (mod1 - 1)) + 1;
+				state2 = (state2 % (mod2 - 1)) + 1;
+				function random(limit) {
+					state1 = (state1 * mul1) % mod1;
+					state2 = (state2 * mul2) % mod2;
+					if (state1 < limit && state2 < limit && state1 < mod1 % limit && state2 < mod2 % limit) {
+						return random(limit);
+					}
+					return (state1 + state2) % limit;
+				}
+				return random;
+			}
+
+			var date = new Date();
+			console.log(date.toLocaleDateString());
+			var num = Math.abs(referrer.hashCode()) + date.getDate() + date.getMonth() * 100 + date.getFullYear() + date.getMinutes();
+			console.log(num);
+
+			var generator = SeedRandom(num);
+			console.log(generator(10));
+		</script>
+	</body>
+</html>

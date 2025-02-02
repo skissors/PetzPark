@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="widget-styles.css" />
+		<!-- <link href="../live sites/alive-enough/styles/styles-win31.css" rel="stylesheet" /> -->
+		<!-- <link rel="stylesheet" href="https://unpkg.com/98.css" />  -->
+		<style>
+			body {
+				background-image: url('img/Grass.bmp');
+				color: white;
+				font-family: Comic Sans MS;
+				margin: auto;
+				text-align: center;
+				display: grid;
+				grid-template-columns: 1fr min-content 1fr;
+			}
+
+			.main {
+				width: 900px;
+				margin: auto;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: min-content 1fr;
+				grid-template-rows: min-content 1fr;
+				margin: auto;
+
+				align-items: center;
+				justify-content: center;
+				gap: 20px 30px;
+				margin: auto;
+				width: fit-content;
+			}
+
+			#frame-window {
+				margin-top: 20px;
+			}
+
+			form {
+				grid-row: span 2;
+				width: fit-content;
+			}
+
+			h3 {
+				margin: 0;
+				text-align: left;
+				border-bottom: 3px dotted brown;
+				padding-bottom: 2px;
+				padding-top: 8px;
+			}
+
+			form div {
+				display: flex;
+				align-items: center;
+				gap: 3px;
+			}
+
+			fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+
+			.sub-options {
+				padding-left: 50px;
+			}
+
+			input[type="text"] {
+				height: 24px;
+				width: 60px;
+				margin-left: 3px;
+			}
+
+			input[type="url"] {
+				height: 24px;
+				width: 300px;
+				margin-left: 3px;
+			}
+
+			.border {
+				border-image-slice: 16 18 15 19 fill;
+				border-image-width: 20px 20px 20px 20px;
+				border-image-outset: 0px 0px 0px 0px;
+				border-image-repeat: repeat repeat;
+				border-image-source: url("data:image/gif;base64,R0lGODlhbAAuALP/AMDAwNaUlJxKSpRSSpxSSoxCOXM5MUIYEFo5MXs5KaVrWkIhCN7GlAAAAAAAAAAAACH5BAEAAAAALAAAAABsAC4AQAT/EMhJq7046827z4chjsfBnGiqrmzrvnB8liNphaIg73zv/yiBDYAz6IDIpFImFB0kRUNgSa0qA7XnrWYUBKbW8DUgaA49NK56zW673/C4U6uJGsX4fJBLLx71gHpmWn6BhniDFFFeh40+ZFloBwtylZaXmAslHxsKnp+goaKjpKWmp6icW2slra6vsLGys7S1tWx0F3YGJo6+L7u5i7/EPGa8UCN/xcwviUTKzdIuz4XT1ynV0djcz9A5YNzMkE43UQXh4oABBVm5GLuY8vP0au+q+Pn6+/zm8fUAA865h0agwYNwCOpi1UsdlTR86thzGCjYwhrLKAI6hkwRRo2/d471+QgyZKRvd0oSq4Ygh8qVIhAQ2vbSkTaXNW0OsZbz0M2UPQ39zBg0z08pRdedjEIgXdIqAQicRGnE6dMk5MopijLA6lUeAQa4g8fFi9evLL5wVKgoAcYyAlDJnUu3Lii4xxKw1fUPoV96m/bZGky4sGFbHCIAADs=");
+				border-style: solid;
+
+				padding: 8px 10px;
+
+				color: #5a2118;
+			}
+
+			.sign-up {
+				grid-column: span 2;
+				padding: 20px;
+				margin: auto;
+				min-width: 0px;
+				max-width: 740px;
+			}
+
+			.sign-up p {
+				margin: 0;
+			}
+
+			ul {
+				text-align: left;
+				margin: auto;
+				max-width: 650px;
+			}
+
+			.code-box {
+				place-self: stretch;
+				display: flex;
+				flex-direction: column;
+				padding: 12px;
+				gap: 3px;
+			}
+
+			.copy-box {
+				width: 100%;
+				height: 100%;
+				resize: none;
+			}
+
+			footer {
+				grid-column: span 3;
+				padding: 5px;
+				font-size: 12px;
+			}
+			footer a {
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left-side">
+		</div>
+
+		<div class="wrapper">
+			<div class="main">
+				<h1>Petz Park</h1>
+				<p>
+					Welcome to Petz Park, a webring themed around the P.F. Magic Petz game. Each day, a new pet will visit your corner of the park, and in turn, your pet will wander over to other
+					people's sites. You are also welcome to post the widget on your page without submitting a pet, to add a little taste of 90s era virtual petz to your page.
+				</p>
+			</div>
+
+			<div class="grid">
+
+				<div class="window basic" id="frame-window" style="width: 250px; height: 250px">
+					<a href="index.html" class="title-bar" target="_blank">
+						<div class="title-bar-text">Petz Park</div>
+						<button aria-label="Close" class="close"></button>
+					</a>
+					<div class="window-body" id="window-body">
+						<img id="pet-pix" src="petz/idle/jack.gif" title="click and hold to pet me!"/>
+					</div>
+					<a id="petLink" href="https://oodlecat.meowandsparkle.party/" class="pet-info" target="_blank">
+						<div id="petName" >Jack</div>
+						<div id="ownerInfo" class="owner">owned by skissors @ Alive Enough</div>
+					</a>
+				</div>
+
+				<form class="border">
+					<fieldset>
+						<h3 style="padding-top: 0">Theme</h3>
+						<div><input type="radio" id="basic" name="theme-style" value="basic" /><label for="basic">Basic</label></div>
+						<div><input type="radio" id="win95" name="theme-style" value="win95" /><label for="win95">Windows 95</label></div>
+						<fieldset class="sub-options">
+							<div>
+								<label>Color 1:</label><input type="text" class="color-text" id="w95-color-1-txt" /><input type="color" class="color-picker" id="w95-color-1-picker" />
+								<label>Color 2:</label><input type="text" class="color-text" id="w95-color-2-txt" /><input type="color" class="color-picker" id="w95-color-2-picker" />
+							</div>
+							<div>(tip: for a solid look, set both to the same color)</div>
+						</fieldset>
+						<div><input type="radio" id="winXP" name="theme-style" value="winXP" /><label for="javascript">Windows XP</label></div>
+					</fieldset>
+
+					<fieldset>
+						<h3>Background Options</h3>
+						<div>
+							<input type="radio" id="bk-rotate" name="background-options" value="rotate" />
+							<label>Rotate (switches each day alongside the pet)</label>
+						</div>
+						<div>
+							<input type="radio" id="bk-fixed" name="background-options" value="fixed" /><label>Fixed</label>
+							<select id="background-select"></select>
+						</div>
+						<div>
+							<input type="radio" id="bk-solid" name="background-options" value="solid" />
+							<label>Solid Color</label>
+							<input type="text" class="color-text" id="background-txt" />
+							<input type="color" class="color-picker" id="background-picker" />
+						</div>
+						<div>
+							<input type="radio" id="bk-custom" name="background-options" value="custom" />
+							<label>Custom URL</label>
+							<input type="url" id="background-url" />
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<h3>Text Options</h3>
+						<div>
+							<label>Text Color:</label>
+							<input type="text" id="text-color-txt" class="color-text" />
+							<input type="color" class="color-picker" id="text-color-picker" />
+						</div>
+						<div>
+							<label>Outline Color:</label>
+							<input type="text" id="outline-color-txt" class="color-text" />
+							<input type="color" class="color-picker" id="outline-color-picker" />
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="border code-box">
+					<textarea class="copy-box" id="copy-box">widget code will go here</textarea>
+					<div>
+						<button onclick="generateCode()">Generate Code</button>
+						<button onclick="copyText()">Copy</button>
+					</div>
+				</div>
+
+				<div style="grid-column: span 2" class="border sign-up">
+					<p>To send a pet to play at the park, simply message the following info to skissors on discord (or make a comment or pull request on the Petz Park github page)</p>
+					<ul>
+						<li>your name:</li>
+						<li>your pet's name:</li>
+						<li>your site's name:</li>
+						<li>your site's url:</li>
+						<li>
+							and 2 transparent, looping gif of your pet:
+							<ul>
+								<li>one of your pet just hanging out</li>
+								<li>one of your pet being pet by the cursor</li>
+							</ul>
+							For best results, gifs should ideally be 250px square or less<br />
+							(tip: you can use <a href="https://www.screentogif.com/">ScreenToGif</a> to easily capture gifs from the petz game)
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-side"></div>
+
+		<footer>
+			created by skissors @ Alive Enough. XP/95 CSS styles adapted from <a href="https://botoxparty.github.io/XP.css/">XP.css</a> and <a href="https://jdan.github.io/98.css/">98.css</a>. keep
+			circulating the zips.
+		</footer>
+
+		<script src="data/wallpapers.js"></script>
+		<script src="main-code.js"></script>
+	</body>
+</html>
