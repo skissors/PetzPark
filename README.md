@@ -1,2 +1,2 @@
 # PetzPark
- a petz themed webring clique thing
+ a petz themed website clique thing
