@@ -53,6 +53,7 @@ function startup() {
 
 	setupPetting();
 	fillGutters();
+	removeAlt();
 }
 
 function updateTheme(event) {
@@ -229,5 +230,13 @@ function fillGutters() {
 		}
 		usedNums.push(num);
 		return num;
+	}
+}
+
+function removeAlt() {
+	var elems = document.getElementById("viewcounter").getElementsByTagName("img");
+	for (let e in elems) {
+		elems[e].alt = "";
+		elems[e].title = "";
 	}
 }
