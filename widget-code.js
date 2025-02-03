@@ -13,6 +13,15 @@ function startup() {
 	let theme = params.get("theme");
 	if (theme && themeList.includes(theme)) {
 		document.getElementById("frame-window").className = "window " + theme;
+		if(theme === "win95") {
+			let color1 = params.get("winColor1");
+			let color2 = params.get("winColor2");
+			if(color1 && color1.length === 6) {
+				if (!(color2 && color2.length === 6)) color2 = color1;
+				r.style.setProperty("--w95-color-1", "#" + color1);
+				r.style.setProperty("--w95-color-2", "#" + color2);
+			}		
+		}
 	}
 
 	let textColor = params.get("textColor");
