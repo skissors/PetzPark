@@ -2,6 +2,7 @@ backgrounds = [
     "16_BONE.png",
     "16_BUMP.png",
     "16_GRAS1.png",
+    "16_GRAS2.png",
     "16_PAW.png",
     "16_PAWZ.png",
     "256BONE.png",

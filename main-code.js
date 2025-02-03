@@ -93,7 +93,7 @@ function updateBackground(event) {
 		let wall = document.getElementById("background-select").value;
 		r.style.setProperty("--background", "url('wallpaper/" + wall + "')");
 		// CHANGE THIS TO FULL URL
-		backgroundValue = "wallpaper/" + wall;
+		backgroundValue = "https://skissors.github.io/PetzPark/wallpaper/" + wall;
 	} else if (text === "solid") {
 		let color = document.getElementById("background-txt").value;
 		r.style.setProperty("--background", color);
@@ -112,7 +112,7 @@ function updateBackgroundImg(event) {
 	if (id === "background-select" && document.getElementById("bk-fixed").checked) {
 		r.style.setProperty("--background", "url('wallpaper/" + value + "')");
 		// CHANGE THIS TO FULL URL
-		backgroundValue = "wallpaper/" + value;
+		backgroundValue = "https://skissors.github.io/PetzPark/wallpaper/" + value;
 	} else if (id === "background-url" && document.getElementById("bk-custom").checked && value != "") {
 		r.style.setProperty("--background", "url('" + value + "')");
 		backgroundValue = value;
@@ -127,7 +127,7 @@ function generateCode() {
 
 	console.log(backgroundValue);
 
-	let url = `widget.html?seed=${seed}&theme=${theme}&textColor=${textColor}&outlineColor=${outlineColor}&background=${backgroundValue}`;
+	let url = `https://skissors.github.io/PetzPark/widget.html?seed=${seed}&theme=${theme}&textColor=${textColor}&outlineColor=${outlineColor}&background=${backgroundValue}`;
 
 	if (theme === "win95") {
 		let win95color1 = rs.getPropertyValue("--w95-color-1").slice(1, 7);
@@ -158,12 +158,12 @@ function petting(e) {
     e.preventDefault();
     e.target.classList.add("petting");
     e.target.title = ""
-    e.target.src="petz/petting/jack.gif";
+    e.target.src="https://skissors.github.io/PetzPark/petz/petting/jack.gif";
 }
 
 function cleanupPetting(e) {
     e.target.classList.remove("petting");
     e.target.title = "click and hold to pet me!"
-    e.target.src="petz/idle/jack.gif";
+    e.target.src="https://skissors.github.io/PetzPark/petz/idle/jack.gif";
 }
 

@@ -38,7 +38,7 @@ function startup() {
     else {
         let bkgd = backgrounds[randGen(backgrounds.length)];
         console.log(bkgd)
-        r.style.setProperty("--background", "url('wallpaper/" + bkgd + "')");
+        r.style.setProperty("--background", "url('https://skissors.github.io/PetzPark/wallpaper/" + bkgd + "')");
 	}
 
     petIndex = randGen(petz.length);
@@ -67,7 +67,7 @@ function loadPetData(pet) {
     document.getElementById("petName").innerHTML = pet.name
     document.getElementById("ownerInfo").innerHTML = "owned by " + pet.owner + " @ " + pet.site
     document.getElementById("petLink").href = pet.url
-	document.getElementById("pet-pix").src = "petz/idle/"+ cleanName(pet.name) +".gif";
+	document.getElementById("pet-pix").src = "https://skissors.github.io/PetzPark/petz/idle/"+ cleanName(pet.name) +".gif";
 }
 
 function setupPetting(pet) {
@@ -80,13 +80,13 @@ function setupPetting(pet) {
 		e.preventDefault();
 		e.target.classList.add("petting");
 		e.target.title = ""
-		e.target.src="petz/petting/"+ cleanPetName +".gif";
+		e.target.src="https://skissors.github.io/PetzPark/petz/petting/"+ cleanPetName +".gif";
 	}
 	
 	function cleanupPetting(e) {
 		e.target.classList.remove("petting");
 		e.target.title = "click and hold to pet me!"
-		e.target.src="petz/idle/"+ cleanPetName +".gif";
+		e.target.src="https://skissors.github.io/PetzPark/petz/idle/"+ cleanPetName +".gif";
 	}
 }
 
