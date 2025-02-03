@@ -17,9 +17,11 @@
 :root {
     --text-color: #ffffff;
     --outline-color: #000000;
-    --background: url('wallpaper/16_GRAS1.png');
+    --background: url('wallpaper/Field.png');
     --w95-color-1: #000080;
     --w95-color-2: #1084d0;
+
+    --basic-border: 2px white inset;
 }
 
 
@@ -38,18 +40,17 @@ body {
 .window {
     position: relative;
     overflow: hidden;
-    background-color: silver;
+    background: var(--background);
     width: 100vw;
     height: 100vh;
 }
 
 .window.basic {
-    border: 2px white inset;
+    border: var(--basic-border);
 }
 
 .window.win95 {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff, inset -3px -3px silver, inset 3px 3px silver;
     padding: 3px;
 }
 
@@ -175,7 +176,6 @@ body {
     justify-content: center;
     padding-top: 15px;
     overflow: hidden;
-    background: var(--background);
     cursor: url('img/1.png'), auto;
 }
 

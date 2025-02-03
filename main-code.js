@@ -3,6 +3,7 @@ let rs = getComputedStyle(r);
 
 let theme = "basic";
 let backgroundValue = "rotate";
+let borderStyle = "border";
 
 window.addEventListener("load", startup, false);
 
@@ -10,6 +11,11 @@ function startup() {
 	document.getElementsByName("theme-style").forEach((p) => {
 		if (p.id === "basic") p.checked = true;
 		p.addEventListener("change", updateTheme, false);
+	});
+
+	document.getElementsByName("border-style").forEach((p) => {
+		if (p.id === "b-border") p.checked = true;
+		p.addEventListener("change", updateBorder, false);
 	});
 
 	document.getElementsByName("background-options").forEach((p) => {
@@ -44,11 +50,24 @@ function startup() {
 
 	selectElement.addEventListener("change", updateBackgroundImg, false);
 	document.getElementById("background-url").addEventListener("change", updateBackgroundImg, false);
+
+	setupPetting();
+	fillGutters();
 }
 
 function updateTheme(event) {
 	theme = event.target.value;
 	document.getElementById("frame-window").className = "window " + theme;
+}
+
+function updateBorder(event) {
+	style = event.target.value;
+	borderStyle = style;
+	if (style === "no-border") {
+		r.style.setProperty("--basic-border", "none");
+	} else {
+		r.style.setProperty("--basic-border", "2px white inset");
+	}
 }
 
 function updateColorPicker(event) {
@@ -102,6 +121,9 @@ function updateBackground(event) {
 		url = document.getElementById("background-url").value;
 		if (url != "") r.style.setProperty("--background", "url('" + url + "')");
 		backgroundValue = url;
+	} else if (text === "transparent") {
+		r.style.setProperty("--background", "none");
+		backgroundValue = "none";
 	}
 }
 
@@ -125,8 +147,6 @@ function generateCode() {
 
 	let seed = Math.floor(Math.random() * 10000);
 
-	console.log(backgroundValue);
-
 	let url = `https://skissors.github.io/PetzPark/widget.html?seed=${seed}&theme=${theme}&textColor=${textColor}&outlineColor=${outlineColor}&background=${backgroundValue}`;
 
 	if (theme === "win95") {
@@ -134,6 +154,8 @@ function generateCode() {
 		let win95color2 = rs.getPropertyValue("--w95-color-2").slice(1, 7);
 
 		url += `&winColor1=${win95color1}&winColor2=${win95color2}`;
+	} else if (theme === "basic") {
+		url += `&border=${borderStyle}`;
 	}
 
 	let template = `<iframe src="${url}" style="width: 250px; height:250px; border: none"></iframe>`;
@@ -142,28 +164,70 @@ function generateCode() {
 }
 
 function copyText() {
-    let text = document.getElementById("copy-box").innerHTML;
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(text);
-    
-    // Alert the copied text
-    alert("Copied the code successfully");
+	let text = document.getElementById("copy-box").value;
+
+	// Copy the text inside the text field
+	navigator.clipboard.writeText(text);
+
+	// Alert the copied text
+	alert("Copied the code successfully");
 }
 
-document.getElementById("pet-pix").onmousedown = petting;
-document.getElementById("pet-pix").onmouseup = cleanupPetting;
-document.getElementById("pet-pix").addEventListener('mouseout', cleanupPetting);
-
-function petting(e) {
-    e.preventDefault();
-    e.target.classList.add("petting");
-    e.target.title = ""
-    e.target.src="https://skissors.github.io/PetzPark/petz/petting/jack.gif";
+function setPetPreview() {
+	let idle = document.getElementById("pp-idle").value;
+	let petting = document.getElementById("pp-petting").value;
+	console.log(idle);
+	console.log(petting);
+	if (!idle || idle === "") idle = "petz/idle/jack.gif";
+	if (!petting || petting === "") petting = "petz/petting/jack.gif";
+	document.getElementById("pet-pix").src = idle;
+	setupPetting(idle, petting);
 }
 
-function cleanupPetting(e) {
-    e.target.classList.remove("petting");
-    e.target.title = "click and hold to pet me!"
-    e.target.src="https://skissors.github.io/PetzPark/petz/idle/jack.gif";
+function setupPetting(idle, petting) {
+	document.getElementById("pet-pix").onmousedown = startPetting;
+	document.getElementById("pet-pix").onmouseup = cleanupPetting;
+	document.getElementById("pet-pix").addEventListener("mouseout", cleanupPetting);
+
+	function startPetting(e) {
+		e.preventDefault();
+		e.target.classList.add("petting");
+		e.target.title = "";
+		if (!petting || petting === "") petting = "petz/petting/jack.gif";
+		e.target.src = petting;
+	}
+
+	function cleanupPetting(e) {
+		e.target.classList.remove("petting");
+		e.target.title = "click and hold to pet me!";
+		if (!idle || idle === "") idle = "petz/idle/jack.gif";
+		e.target.src = idle;
+	}
 }
 
+function fillGutters() {
+	let height = document.documentElement.scrollHeight;
+	let petzToGen = Math.floor(height / 250);
+
+	if (petzToGen * 2 > petz.length) {
+		petzToGen = Math.floor(petz.length / 2);
+	}
+
+	let left = document.getElementById("left-side");
+	let right = document.getElementById("right-side");
+	let usedNums = [];
+
+	for (let i = 0; i < petzToGen; i++) {
+		left.innerHTML += `<iframe src="widget.html?background=none&border=no-border&title=none&fixedPet=${getUnusedNum()}" style="width: 250px; height:250px; border: none"></iframe>`;
+		right.innerHTML += `<iframe src="widget.html?background=none&border=no-border&title=none&fixedPet=${getUnusedNum()}" style="width: 250px; height:250px; border: none"></iframe>`;
+	}
+
+	function getUnusedNum() {
+		num = Math.floor(Math.random(petz.length) * petz.length);
+		while (usedNums.includes(num)) {
+			num = Math.floor(Math.random(petz.length) * petz.length);
+		}
+		usedNums.push(num);
+		return num;
+	}
+}

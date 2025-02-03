@@ -34,13 +34,14 @@
 				gap: 20px 30px;
 				margin: auto;
 				width: fit-content;
+				height: fit-content;
 			}
 
 			#frame-window {
 				margin-top: 20px;
 			}
 
-			form {
+			.widget-form {
 				grid-row: span 2;
 				width: fit-content;
 			}
@@ -53,7 +54,7 @@
 				padding-top: 8px;
 			}
 
-			form div {
+			.widget-form div {
 				display: flex;
 				align-items: center;
 				gap: 3px;
@@ -137,10 +138,44 @@
 			footer a {
 				color: white;
 			}
+			.sidebar {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				height: 100%;
+			}
+			.sidebar.left {
+				align-items: flex-end;
+			}
+			.sidebar.left iframe:nth-child(2n) {
+				align-self: flex-start;
+			}
+			.sidebar.right {
+				align-items: flex-start;
+			}
+			.sidebar.right iframe:nth-child(2n) {
+				align-self: flex-end;
+			}
+
+			.pet-preview-form {
+				display: grid;
+				grid-template-columns: min-content min-content;
+				gap: 3px;
+				text-wrap: nowrap;
+				text-align: right;
+				margin: 3px auto;
+				width: min-content;
+		
+			}
+
+			.no-padding-top {
+				padding-top: 0;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="left-side">
+		<div class="sidebar left" id="left-side">
+		
 		</div>
 
 		<div class="wrapper">
@@ -155,7 +190,7 @@
 			<div class="grid">
 
 				<div class="window basic" id="frame-window" style="width: 250px; height: 250px">
-					<a href="index.html" class="title-bar" target="_blank">
+					<a href="index.html" class="title-bar" target="_blank" id="title-bar">
 						<div class="title-bar-text">Petz Park</div>
 						<button aria-label="Close" class="close"></button>
 					</a>
@@ -168,10 +203,16 @@
 					</a>
 				</div>
 
-				<form class="border">
+				<form class="border widget-form">
 					<fieldset>
-						<h3 style="padding-top: 0">Theme</h3>
+						<h3 class="no-padding-top">Theme</h3>
 						<div><input type="radio" id="basic" name="theme-style" value="basic" /><label for="basic">Basic</label></div>
+						<fieldset class="sub-options">
+							<div>
+								<input type="radio" id="b-border" name="border-style" value="border" /><label>Border</label>
+								<input type="radio" id="b-no-border" name="border-style" value="no-border" /><label>No Border</label>
+							</div>
+						</fieldset>
 						<div><input type="radio" id="win95" name="theme-style" value="win95" /><label for="win95">Windows 95</label></div>
 						<fieldset class="sub-options">
 							<div>
@@ -204,6 +245,10 @@
 							<label>Custom URL</label>
 							<input type="url" id="background-url" />
 						</div>
+						<div>
+							<input type="radio" id="bk-transparent" name="background-options" value="transparent" />
+							<label>Transparent</label>
+						</div>
 					</fieldset>
 
 					<fieldset>
@@ -219,6 +264,7 @@
 							<input type="color" class="color-picker" id="outline-color-picker" />
 						</div>
 					</fieldset>
+					
 				</form>
 
 				<div class="border code-box">
@@ -230,27 +276,50 @@
 				</div>
 
 				<div style="grid-column: span 2" class="border sign-up">
-					<p>To send a pet to play at the park, simply message the following info to skissors on discord (or make a comment or pull request on the Petz Park github page)</p>
-					<ul>
-						<li>your name:</li>
-						<li>your pet's name:</li>
-						<li>your site's name:</li>
-						<li>your site's url:</li>
-						<li>
-							and 2 transparent, looping gif of your pet:
-							<ul>
-								<li>one of your pet just hanging out</li>
-								<li>one of your pet being pet by the cursor</li>
-							</ul>
-							For best results, gifs should ideally be 250px square or less<br />
-							(tip: you can use <a href="https://www.screentogif.com/">ScreenToGif</a> to easily capture gifs from the petz game)
-						</li>
-					</ul>
+					<div>
+						<h3 class="no-padding-top">Submission Info</h3>
+						<p>To send a pet to play at the park, simply message the following info to skissors on discord (or make a comment or pull request on the Petz Park github page).</p>
+						<ul>
+							<li>your name:</li>
+							<li>your pet's name:</li>
+							<li>your site's name:</li>
+							<li>your site's url:</li>
+							<li>
+								and 2 transparent, looping gif of your pet:
+								<ul>
+									<li>one of your pet just hanging out</li>
+									<li>one of your pet being pet by the cursor</li>
+								</ul>
+								For best results, gifs should ideally be 250px square or less<br />
+								(tip: you can use <a href="https://www.screentogif.com/">ScreenToGif</a> to easily capture gifs from the petz game)
+							</li>
+						</ul>
+						<p style="padding-top: 10px; text-align: justify;">Currently, to submit a pet, you must have a personal website, blog or other online page that can 1) be linked back to and 2) host a copy of the widget. However, more petz equals more fun, so you are welcome to submit up to 3 petz per person!</p>
+					</div>
+					<div>
+						<h3>Gif Capturing Tips</h3>
+						<ul>
+							<li>Try to make the gif start and end on the same pose for a clean loop</li>
+							<li>Similarly, try to have your petting gif be a similar position to your idle gif for a better transition</li>
+							<li>You can trim down sections where you pet doesn't move to make a better paced loop</li>
+							<li>Try to make sure the center of the gif is where you your pet spends most of its time. if your pet moves briefly in one direction, feel free to have some dead space in the other direction to keep the pet centered overall</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Pet Preview</h3>
+						<div style="text-align: justify;">If you'd like to preview you pet before submitting, you can simply paste the url to your two gifs below, and the above widget will update to show your pet. Note that this does not add your pet to the system - it just lets you preview the pet on this page so you can test out how your gifs will look</div>
+						<form class="pet-preview-form">
+							<label>Idle gif:</label><input type="url" name="pet-preview" id="pp-idle">
+							<label>Petting gif:</label><input type="url" name="pet-preview" id="pp-petting">
+						</form>
+						<button onclick="setPetPreview()">Update Pet Preview</button>
+					</div>
+
 				</div>
 			</div>
 		</div>
 
-		<div class="right-side"></div>
+		<div class="sidebar right" id="right-side"></div>
 
 		<footer>
 			created by skissors @ Alive Enough. XP/95 CSS styles adapted from <a href="https://botoxparty.github.io/XP.css/">XP.css</a> and <a href="https://jdan.github.io/98.css/">98.css</a>. keep
@@ -258,6 +327,7 @@
 		</footer>
 
 		<script src="data/wallpapers.js"></script>
+		<script src="data/parkPetz.js"></script>
 		<script src="main-code.js"></script>
 	</body>
 </html>

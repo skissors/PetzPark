@@ -17,4 +17,16 @@ petz = [
 		site: "Mythic Silence",
 		url: "https://www.mythicsilence.com/malevolent/index.php",
 	},
+	{
+		name: "Manon",
+		owner: "mouse",
+		site: "cookie planet",
+		url: "https://cookie-planet.neocities.org/",
+	},
+	{
+		name: "Shortbread",
+		owner: "mouse",
+		site: "in flore",
+		url: "https://inflore.neocities.org/",
+	},
 ];
