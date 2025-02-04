@@ -34,5 +34,23 @@ petz = [
 		owner: "Megan",
 		site: "Oasis",
 		url: "https://oasis.fantazzled.com/",
-	}
+	},
+	{
+		name: "Vesper",
+		owner: "ShenzaiBird",
+		site: "Korvulpine",
+		url: "https://shenzaibird.neocities.org/z/Petz/",
+	},
+	{
+		name: "Thunder",
+		owner: "ShenzaiBird",
+		site: "Korvulpine",
+		url: "https://shenzaibird.neocities.org/z/Petz/",
+	},
+	{
+		name: "Zalyx",
+		owner: "ShenzaiBird",
+		site: "Korvulpine",
+		url: "https://shenzaibird.neocities.org/z/Petz/",
+	},
 ];
