@@ -29,4 +29,10 @@ petz = [
 		site: "in flore",
 		url: "https://inflore.neocities.org/",
 	},
+	{
+		name: "Delphinium",
+		owner: "Megan",
+		site: "Oasis",
+		url: "https://oasis.fantazzled.com/",
+	}
 ];
