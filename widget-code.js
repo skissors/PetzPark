@@ -93,14 +93,14 @@ function loadPetData(pet) {
 	document.getElementById("petName").innerHTML = pet.name;
 	document.getElementById("ownerInfo").innerHTML = "owned by " + pet.owner + " @ " + pet.site;
 	document.getElementById("petLink").href = pet.url;
-	document.getElementById("pet-pix").src = "petz/idle/" + cleanName(pet.name) + ".gif";
+	document.getElementById("pet-pix").src = "petz/idle/" + cleanName(pet.name) + '-' + cleanName(pet.owner) + ".gif";
 }
 
 function setupPetting(pet) {
 	document.getElementById("pet-pix").onmousedown = petting;
 	document.getElementById("pet-pix").onmouseup = cleanupPetting;
 	document.getElementById("pet-pix").addEventListener("mouseout", cleanupPetting);
-	let cleanPetName = cleanName(pet.name);
+	let cleanPetName = cleanName(pet.name) + '-' + cleanName(pet.owner)
 
 	function petting(e) {
 		e.preventDefault();

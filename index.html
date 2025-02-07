@@ -163,7 +163,7 @@
 				}
 				body {
 					grid-template-columns: 1fr;
-					margin:auto
+					margin: auto;
 				}
 			}
 
@@ -182,8 +182,9 @@
 			}
 
 			.justify {
-				text-align: justify;
-				text-align-last: center;
+				margin:10px 0;
+				text-align: left;
+				
 			}
 		</style>
 	</head>
@@ -206,7 +207,7 @@
 						<button aria-label="Close" class="close"></button>
 					</a>
 					<div class="window-body" id="window-body">
-						<img id="pet-pix" src="petz/idle/jack.gif" title="click and hold to pet me!" />
+						<img id="pet-pix" src="petz/idle/jack-skissors.gif" title="click and hold to pet me!" />
 					</div>
 					<a id="petLink" href="https://oodlecat.meowandsparkle.party/" class="pet-info" target="_blank">
 						<div id="petName">Jack</div>
@@ -288,10 +289,10 @@
 				<div style="grid-column: span 2" class="border sign-up">
 					<div>
 						<h3 class="no-padding-top">Submission Info</h3>
-						<p class="justify">
+						<div class="justify">
 							To send a pet to play at the park, simply pop into <a href="https://discord.gg/N8pHJdDfSx">skissors' project discord</a> and submit the below info to the Petz Park
 							submission channel. Or, if you're code-inclined, you can also make a pull request on the <a href="https://github.com/skissors/PetzPark">Petz Park github page</a>.
-						</p>
+						</div>
 						<ul>
 							<li>your name:</li>
 							<li>your pet's name:</li>
@@ -303,17 +304,21 @@
 									<li>one of your pet just hanging out</li>
 									<li>one of your pet being pet by the cursor</li>
 								</ul>
-								For best results, gifs should ideally be 250px square or less<br />
-								(tip: you can use <a href="https://www.screentogif.com/">ScreenToGif</a> to easily capture gifs from the petz game)
+								For best results, gifs should ideally be 250px square or less
 							</li>
 						</ul>
-						<p style="padding-top: 10px" class="justify">
+						<div class="justify">
 							Currently, to submit a pet, you must have a personal website, blog or other online page that can 1) be linked back to and 2) host a copy of the widget. However, more petz
 							equals more fun, so you are welcome to submit up to 3 petz per person!
-						</p>
+						</div>
 					</div>
 					<div>
 						<h3>Gif Capturing Tips</h3>
+						<div class="justify">
+							The easiest way to capture gifs from the Petz games is by using the free program <a href="https://www.screentogif.com/">ScreenToGif</a>. You can also download this
+							<a href="img/greenscreens.zip">green screen wallpaper pack</a> which makes capturing a transparent gif super easy - just set one of these solid colors to be your playpen wallpaper, then
+							select it as your transparent color when saving your ScreenToGif capture. That covers the basics, but here are some additional tips:
+						</div>
 						<ul>
 							<li>Try to make the gif start and end on the same pose for a clean loop</li>
 							<li>Similarly, try to have your petting gif be a similar position to your idle gif for a better transition</li>
@@ -323,6 +328,7 @@
 								the other direction to keep the pet centered overall
 							</li>
 						</ul>
+						<div class="justify">(special thanks to Arie@<a href="https://homebody.eu/lf/">Litterz Factory</a> for letting me share her green screen wallpapers!)</div>
 					</div>
 					<div>
 						<h3>Pet Preview</h3>

@@ -194,14 +194,14 @@ function setupPetting(idle, petting) {
 		e.preventDefault();
 		e.target.classList.add("petting");
 		e.target.title = "";
-		if (!petting || petting === "") petting = "petz/petting/jack.gif";
+		if (!petting || petting === "") petting = "petz/petting/jack-skissors.gif";
 		e.target.src = petting;
 	}
 
 	function cleanupPetting(e) {
 		e.target.classList.remove("petting");
 		e.target.title = "click and hold to pet me!";
-		if (!idle || idle === "") idle = "petz/idle/jack.gif";
+		if (!idle || idle === "") idle = "petz/idle/jack-skissors.gif";
 		e.target.src = idle;
 	}
 }

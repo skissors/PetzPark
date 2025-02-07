@@ -53,4 +53,16 @@ petz = [
 		site: "Korvulpine",
 		url: "https://shenzaibird.neocities.org/z/Petz/",
 	},
+	{
+		name: "Canis Minor",
+		owner: "Shortbread",
+		site: "Canis Major",
+		url: "https://shortbread-kc.tumblr.com/",
+	},
+	{
+		name: "Chance",
+		owner: "Molly",
+		site: "CaliMorgan",
+		url: "https://calimorgan.neocities.org/",
+	},
 ];
