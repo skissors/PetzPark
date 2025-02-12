@@ -65,4 +65,22 @@ petz = [
 		site: "CaliMorgan",
 		url: "https://calimorgan.neocities.org/",
 	},
+	{
+		name: "Dapper",
+		owner: "Penny",
+		site: "Just Dandy",
+		url: "https://lukkypenniedal.wixsite.com/justdandypetz",
+	},
+	{
+		name: "Mr. Moo",
+		owner: "Penny",
+		site: "Just Dandy",
+		url: "https://lukkypenniedal.wixsite.com/justdandypetz",
+	},
+	{
+		name: "Chester",
+		owner: "SWKManda",
+		site: "Manda's Petz: A Miscellany",
+		url: "https://mandaspetzmiscellany.weebly.com/",
+	},
 ];
