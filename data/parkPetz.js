@@ -83,4 +83,10 @@ petz = [
 		site: "Manda's Petz: A Miscellany",
 		url: "https://mandaspetzmiscellany.weebly.com/",
 	},
+	{
+		name: "Star",
+		owner: "Commander",
+		site: "Powerhouse",
+		url: "https://commander.bravesites.com/",
+	},
 ];
