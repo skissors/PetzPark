@@ -89,4 +89,16 @@ petz = [
 		site: "Powerhouse",
 		url: "https://commander.bravesites.com/",
 	},
+	{
+		name: "Silly Spots",
+		owner: "Abby",
+		site: "Abby's Petz Society",
+		url: "https://www.dreamtyme.org/abbyspetz/",
+	},
+	{
+		name: "Bartok",
+		owner: "Archie",
+		site: "woodside-petz",
+		url: "https://woodside-petz.neocities.org/",
+	},
 ];
