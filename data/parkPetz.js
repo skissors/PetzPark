@@ -80,7 +80,7 @@ petz = [
 	{
 		name: "Chester",
 		owner: "SWKManda",
-		site: "Manda's Petz: A Miscellany",
+		site: "Manda's Petz:A Miscellany",
 		url: "https://mandaspetzmiscellany.weebly.com/",
 	},
 	{
@@ -100,5 +100,23 @@ petz = [
 		owner: "Archie",
 		site: "woodside-petz",
 		url: "https://woodside-petz.neocities.org/",
+	},
+	{
+		name: "Swampbert",
+		owner: "Cactus",
+		site: "Froglandia",
+		url: "https://froglandia.neocities.org/",
+	},
+	{
+		name: "Damien",
+		owner: "gyiyg",
+		site: "polygondwanaland",
+		url: "https://gyiyg.petz.quest/",
+	},
+	{
+		name: "Spekles",
+		owner: "stancymckatt",
+		site: "StancyMcKatt's Petz",
+		url: "http://smpetz.blogspot.com/",
 	},
 ];
