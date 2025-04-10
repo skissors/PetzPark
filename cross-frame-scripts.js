@@ -23,7 +23,7 @@ function childMessageProcessor(e) {
 
 function sendClickEvent() {
     console.log("sending click event")
-    window.top.postMessage(JSON.stringify({ "click" : id }));
+    window.top.postMessage(JSON.stringify({ "click" : id }), origin);
 }
 
 function updateURL() {
@@ -34,5 +34,5 @@ function updateURL() {
         "title":document.title,
     }
     console.log(message)
-	window.top.postMessage(JSON.stringify(message));
+	window.top.postMessage(JSON.stringify(message), origin);
 }
