@@ -2,7 +2,9 @@ let id = "";
 let origin = window.origin;
 
 function initCrossFrame(newOrigin) {
+    console.log(origin)
     if(newOrigin) origin = newOrigin;
+    console.log(origin)
 	window.addEventListener("message", childMessageProcessor);
     document.addEventListener("click", sendClickEvent);
 }
