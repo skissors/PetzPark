@@ -10,6 +10,8 @@ function initCrossFrame(newOrigin) {
 }
 
 function childMessageProcessor(e) {
+    console.log("processing message")
+    console.log(e)
 	if (e.origin === origin) {
 		let data = JSON.parse(e.data);
 		if (data.id) {
@@ -20,14 +22,17 @@ function childMessageProcessor(e) {
 }
 
 function sendClickEvent() {
+    console.log("sending click event")
     window.top.postMessage(JSON.stringify({ "click" : id }));
 }
 
 function updateURL() {
+    console.log("sending url event")
     let message = {
         "id":id,
         "url":window.location.href, 
         "title":document.title,
     }
+    console.log(message)
 	window.top.postMessage(JSON.stringify(message));
 }

@@ -11,7 +11,7 @@ window.addEventListener("load", startup, false);
 
 function startup() {
 	
-	initCrossFrame("https://oodlecat.meowandsparkle.party/")
+	initCrossFrame("https://oodlecat.meowandsparkle.party")
 
 	document.getElementsByName("theme-style").forEach((p) => {
 		if (p.id === "basic") p.checked = true;
