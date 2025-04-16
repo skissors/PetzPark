@@ -94,9 +94,19 @@ function loadPetData(pet) {
 	document.getElementById("ownerInfo").innerHTML = "owned by " + pet.owner + " @ " + pet.site;
 	document.getElementById("petLink").href = pet.url;
 	document.getElementById("pet-pix").src = "petz/idle/" + cleanName(pet.name) + '-' + cleanName(pet.owner) + ".gif";
+
+	if(pet.name === "Moonfluff") {
+		let html = /*html*/`
+		<a href="https://oodlecat.meowandsparkle.party/sites/egghunt/petzpark-98141.html" target="_blank">
+			<img id="pet-pix" src="petz/idle/moonfluff-skissors.gif" title="oh, what's this?"/>
+		</a>`
+		document.getElementById("window-body").innerHTML = html
+	}
 }
 
 function setupPetting(pet) {
+	if(pet.name === "Moonfluff") return
+
 	document.getElementById("pet-pix").onmousedown = petting;
 	document.getElementById("pet-pix").onmouseup = cleanupPetting;
 	document.getElementById("pet-pix").addEventListener("mouseout", cleanupPetting);

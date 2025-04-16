@@ -119,4 +119,10 @@ petz = [
 		site: "StancyMcKatt's Petz",
 		url: "http://smpetz.blogspot.com/",
 	},
+	{
+		name: "Moonfluff",
+		owner: "skissors",
+		site: "Alive Enough",
+		url: "https://oodlecat.meowandsparkle.party/",
+	},
 ];

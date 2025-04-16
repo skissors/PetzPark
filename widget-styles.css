@@ -24,7 +24,7 @@
 :root {
     --text-color: #ffffff;
     --outline-color: #000000;
-    --background: url('wallpaper/Field.png');
+    --background: none; /* url('wallpaper/Field.png'); */
     --w95-color-1: #000080;
     --w95-color-2: #1084d0;
 

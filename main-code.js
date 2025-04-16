@@ -1,5 +1,4 @@
 
-
 let r = document.querySelector(":root");
 let rs = getComputedStyle(r);
 
@@ -10,7 +9,6 @@ let borderStyle = "border";
 window.addEventListener("load", startup, false);
 
 function startup() {
-	
 	initCrossFrame("https://oodlecat.meowandsparkle.party")
 
 	document.getElementsByName("theme-style").forEach((p) => {
