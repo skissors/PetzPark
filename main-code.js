@@ -1,4 +1,6 @@
 
+import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/scripts/cors/cross-frame-scripts.js'
+
 let r = document.querySelector(":root");
 let rs = getComputedStyle(r);
 
@@ -56,7 +58,7 @@ function startup() {
 
 	setupPetting();
 	fillGutters();
-	removeAlt();
+
 }
 
 function updateTheme(event) {
@@ -227,7 +229,7 @@ function fillGutters() {
 	}
 
 	function getUnusedNum() {
-		num = Math.floor(Math.random(petz.length) * petz.length);
+		let num = Math.floor(Math.random(petz.length) * petz.length);
 		while (usedNums.includes(num)) {
 			num = Math.floor(Math.random(petz.length) * petz.length);
 		}
@@ -236,10 +238,3 @@ function fillGutters() {
 	}
 }
 
-function removeAlt() {
-	var elems = document.getElementById("viewcounter").getElementsByTagName("img");
-	for (let e in elems) {
-		elems[e].alt = "";
-		elems[e].title = "";
-	}
-}

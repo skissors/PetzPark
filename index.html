@@ -9,13 +9,11 @@
 
 		<script src="data/wallpapers.js"></script>
 		<script src="data/parkPetz.js"></script>
-		<script src="cross-frame-scripts.js"></script>
-		<script src="main-code.js"></script>
+		<script src="main-code.js" type="module"></script>
 		<style>
 			:root {
-				--background: url('wallpaper/Field.png');
+				--background: url("wallpaper/Field.png");
 			}
-
 		</style>
 	</head>
 	<body>
@@ -146,8 +144,8 @@
 						<h3>Gif Capturing Tips</h3>
 						<div class="justify">
 							The easiest way to capture gifs from the Petz games is by using the free program <a href="https://www.screentogif.com/">ScreenToGif</a>. You can also download this
-							<a href="img/greenscreens.zip">green screen wallpaper pack</a> which makes capturing a transparent gif super easy - just set one of these solid colors to be your playpen wallpaper, then
-							select it as your transparent color when saving your ScreenToGif capture. That covers the basics, but here are some additional tips:
+							<a href="img/greenscreens.zip">green screen wallpaper pack</a> which makes capturing a transparent gif super easy - just set one of these solid colors to be your playpen
+							wallpaper, then select it as your transparent color when saving your ScreenToGif capture. That covers the basics, but here are some additional tips:
 						</div>
 						<ul>
 							<li>Try to make the gif start and end on the same pose for a clean loop</li>
@@ -188,6 +186,15 @@
 			</div>
 		</footer>
 
-
+		<script>
+			window.addEventListener("load", removeAlt, false);
+			function removeAlt() {
+				let elems = document.getElementById("viewcounter").getElementsByTagName("img");
+				for (let e in elems) {
+					elems[e].alt = "";
+					elems[e].title = "";
+				}
+			}
+		</script>
 	</body>
 </html>
