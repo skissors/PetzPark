@@ -1,5 +1,5 @@
 
-import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/scripts/cors/cross-frame-scripts.js'
+//import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/scripts/cors/cross-frame-scripts.js'
 
 let r = document.querySelector(":root");
 let rs = getComputedStyle(r);
@@ -11,7 +11,11 @@ let borderStyle = "border";
 window.addEventListener("load", startup, false);
 
 function startup() {
-	initCrossFrame("https://oodlecat.meowandsparkle.party")
+	//initCrossFrame("https://oodlecat.meowandsparkle.party")
+
+	document.getElementById("generateCode").onclick = generateCode;
+	document.getElementById("copyText").onclick = copyText;
+	document.getElementById("setPetPreview").onclick = setPetPreview;
 
 	document.getElementsByName("theme-style").forEach((p) => {
 		if (p.id === "basic") p.checked = true;
