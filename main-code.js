@@ -1,5 +1,5 @@
 
-//import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/scripts/cors/cross-frame-scripts.js'
+import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/core-cross-frame/cross-frame-child.js'
 
 let r = document.querySelector(":root");
 let rs = getComputedStyle(r);
@@ -11,7 +11,7 @@ let borderStyle = "border";
 window.addEventListener("load", startup, false);
 
 function startup() {
-	//initCrossFrame("https://oodlecat.meowandsparkle.party")
+	initCrossFrame()
 
 	document.getElementById("generateCode").onclick = generateCode;
 	document.getElementById("copyText").onclick = copyText;
