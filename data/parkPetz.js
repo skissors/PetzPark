@@ -11,7 +11,7 @@ petz = [
 		site: "Alive Enough",
 		url: "https://oodlecat.meowandsparkle.party/",
 	},
-    {
+	{
 		name: "Ralph",
 		owner: "ECRose",
 		site: "Mythic Silence",
@@ -120,9 +120,21 @@ petz = [
 		url: "http://smpetz.blogspot.com/",
 	},
 	{
-		name: "Moonfluff",
-		owner: "skissors",
-		site: "Alive Enough",
-		url: "https://oodlecat.meowandsparkle.party/",
+		name: "Goliath",
+		owner: "Wrenn",
+		site: "Chimes",
+		url: "https://homebody.eu/chimes/",
+	},
+	{
+		name: "Bentley",
+		owner: "Bunni",
+		site: "Funfetti",
+		url: "http://funfetti.net/",
+	},
+	{
+		name: "Mousetrap",
+		owner: "Clover",
+		site: "CloverCat12's Petz Zone",
+		url: "https://clovercat12-petz.neocities.org/",
 	},
 ];
