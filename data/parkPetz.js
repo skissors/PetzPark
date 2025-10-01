@@ -137,4 +137,59 @@ petz = [
 		site: "CloverCat12's Petz Zone",
 		url: "https://clovercat12-petz.neocities.org/",
 	},
+	{
+		name: "Nikko",
+		owner: "JaneDoom",
+		site: "The Ugly Lemon",
+		url: "https://theuglylemon.neocities.org/",
+	},
+	{
+		name: "Caster",
+		owner: "Serilly",
+		site: "Dreamcasters",
+		url: "https://dreamcasters.neocities.org/",
+	},
+	{
+		name: "Loom",
+		owner: "Kathy",
+		site: "Tabbloza",
+		url: "https://www.tabbloza.com/petz",
+	},
+	{
+		name: "Josh",
+		owner: "Kathy",
+		site: "Tabbloza",
+		url: "https://www.tabbloza.com/petz",
+	},
+	{
+		name: "Aka",
+		owner: "Angora",
+		site: "Mockingbird Petz",
+		url: "https://mockingbirdpetz.weebly.com/",
+	},
+	{
+		name: "Maldal",
+		owner: "Taz",
+		site: "Petzcadia",
+		url: "https://thegreenroom.neocities.org/petzcadia/i",
+	},
+	{
+		name: "Bolt",
+		owner: "Clover",
+		site: "CloverCat12's Petz Zone",
+		url: "https://clovercat12-petz.neocities.org/",
+	},
+
+	{
+		name: "Zane",
+		owner: "Grey",
+		site: "Maniacal Menagerie",
+		url: "https://thecatingrey.neocities.org/",
+	},
+	{
+		name: "Angel Wing",
+		owner: "Taz",
+		site: "Petzcadia",
+		url: "https://thegreenroom.neocities.org/petzcadia/i",
+	},
 ];
