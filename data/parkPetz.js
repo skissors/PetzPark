@@ -187,7 +187,7 @@ petz = [
 		url: "https://thecatingrey.neocities.org/",
 	},
 	{
-		name: "Angel Wing",
+		name: "Angel Wings",
 		owner: "Taz",
 		site: "Petzcadia",
 		url: "https://thegreenroom.neocities.org/petzcadia/i",
