@@ -179,7 +179,6 @@ petz = [
 		site: "CloverCat12's Petz Zone",
 		url: "https://clovercat12-petz.neocities.org/",
 	},
-
 	{
 		name: "Zane",
 		owner: "Grey",
@@ -191,5 +190,35 @@ petz = [
 		owner: "Taz",
 		site: "Petzcadia",
 		url: "https://thegreenroom.neocities.org/petzcadia/i",
+	},
+	{
+		name: "I Spy",
+		owner: "Taz",
+		site: "Petzcadia",
+		url: "https://thegreenroom.neocities.org/petzcadia/i",
+	},
+	{
+		name: "Lancer",
+		owner: "Nikita",
+		site: "My petz 4 stuff",
+		url: "https://ilovepetz4.neocities.org/",
+	},
+	{
+		name: "Pluey",
+		owner: "Taz",
+		site: "Cat Petterz Central",
+		url: "https://catpetterzcentral.neocities.org/",
+	},
+	{
+		name: "Sasha",
+		owner: "setavulos",
+		site: "sekkanza",
+		url: "https://sekkanza.neocities.org/petz",
+	},
+	{
+		name: "Bluescreen",
+		owner: "Ivy",
+		site: "Hydrargyry Kennelz",
+		url: "https://hydrargyrykennelz.neocities.org/",
 	},
 ];
