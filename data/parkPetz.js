@@ -221,4 +221,10 @@ petz = [
 		site: "Hydrargyry Kennelz",
 		url: "https://hydrargyrykennelz.neocities.org/",
 	},
+	{
+		name: "Lotus",
+		owner: "Elliot",
+		site: "Moth",
+		url: "https://mothbloxcattery.neocities.org/",
+	},
 ];
