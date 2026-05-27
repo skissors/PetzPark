@@ -8,28 +8,28 @@
 
 @font-face {
     font-family: "Pixelated MS Sans Serif";
-    src: url("fonts/ms_sans_serif_bold.woff") format("woff");
-    src: url("fonts/ms_sans_serif_bold.woff2") format("woff2");
+    src: url("../fonts/ms_sans_serif_bold.woff") format("woff");
+    src: url("../fonts/ms_sans_serif_bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Backup Comic Sans";
-    src: url("fonts/ComicSansMS.ttf") format("tff");
+    src: url("../fonts/ComicSansMS.ttf") format("tff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Bubbly";
-    src: url("fonts/Bubbly-Regular.otf") format("opentype");
+    src: url("../fonts/Bubbly-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    background-image: url("img/Grass.bmp");
+    background-image: url("../img/Grass.bmp");
     color: white;
     font-family: "Comic Sans MS", "Backup Comic Sans", cursive, sans-serif;
     margin: auto;

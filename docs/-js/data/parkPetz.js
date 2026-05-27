@@ -227,4 +227,10 @@ petz = [
 		site: "Moth",
 		url: "https://mothbloxcattery.neocities.org/",
 	},
+	{
+		name: "Bandit",
+		owner: "Xenon-Starz",
+		site: "Xenon-Starz",
+		url: "https://xenon-starz.neocities.org/",
+	},
 ];

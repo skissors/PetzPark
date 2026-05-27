@@ -24,7 +24,7 @@
 :root {
     --text-color: #ffffff;
     --outline-color: #000000;
-    --background: none; /* url('wallpaper/Field.png'); */
+    --background: /*none;*/  url('../wallpaper/Field.png');
     --w95-color-1: #000080;
     --w95-color-2: #1084d0;
 
@@ -181,35 +181,35 @@ body {
     justify-content: center;
     padding-top: 15px;
     overflow: hidden;
-    cursor: url('img/1.png'), auto;
+    cursor: url('../img/1.png'), auto;
 }
 
 .petting {
-    cursor: url('img/28.png'), auto;
+    cursor: url('../img/28.png'), auto;
     -webkit-animation: cursor 500ms infinite alternate;
     animation: cursor 500ms infinite alternate;
 }
   
   @-webkit-keyframes cursor {
-    0% {cursor: url('img/28.png'), auto;}
-    14% {cursor: url('img/29.png'), auto;}
-    28% {cursor: url('img/30.png'), auto;}
-    42% {cursor: url('img/31.png'), auto;}
-    56% {cursor: url('img/32.png'), auto;}
-    70% {cursor: url('img/33.png'), auto;}
-    84% {cursor: url('img/34.png'), auto;}
-    100% {cursor: url('img/35.png'), auto;}
+    0% {cursor: url('../img/28.png'), auto;}
+    14% {cursor: url('../img/29.png'), auto;}
+    28% {cursor: url('../img/30.png'), auto;}
+    42% {cursor: url('../img/31.png'), auto;}
+    56% {cursor: url('../img/32.png'), auto;}
+    70% {cursor: url('../img/33.png'), auto;}
+    84% {cursor: url('../img/34.png'), auto;}
+    100% {cursor: url('../img/35.png'), auto;}
   } 
   
   @keyframes cursor {
-    0% {cursor: url('img/28.png'), auto;}
-    14% {cursor: url('img/29.png'), auto;}
-    28% {cursor: url('img/30.png'), auto;}
-    42% {cursor: url('img/31.png'), auto;}
-    56% {cursor: url('img/32.png'), auto;}
-    70% {cursor: url('img/33.png'), auto;}
-    84% {cursor: url('img/34.png'), auto;}
-    100% {cursor: url('img/35.png'), auto;}
+    0% {cursor: url('../img/28.png'), auto;}
+    14% {cursor: url('../img/29.png'), auto;}
+    28% {cursor: url('../img/30.png'), auto;}
+    42% {cursor: url('../img/31.png'), auto;}
+    56% {cursor: url('../img/32.png'), auto;}
+    70% {cursor: url('../img/33.png'), auto;}
+    84% {cursor: url('../img/34.png'), auto;}
+    100% {cursor: url('../img/35.png'), auto;}
   } 
 
 

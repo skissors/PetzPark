@@ -1,6 +1,3 @@
-
-import { initCrossFrame } from 'https://oodlecat.meowandsparkle.party/resources/core-cross-frame/cross-frame-child.js'
-
 let r = document.querySelector(":root");
 let rs = getComputedStyle(r);
 
@@ -11,8 +8,6 @@ let borderStyle = "border";
 window.addEventListener("load", startup, false);
 
 function startup() {
-	initCrossFrame()
-
 	document.getElementById("generateCode").onclick = generateCode;
 	document.getElementById("copyText").onclick = copyText;
 	document.getElementById("setPetPreview").onclick = setPetPreview;
@@ -116,11 +111,11 @@ function updateBackground(event) {
 
 	if (text === "rotate") {
 		let nBkgd = Math.floor(Math.random() * backgrounds.length);
-		r.style.setProperty("--background", "url('wallpaper/" + backgrounds[nBkgd] + "')");
+		r.style.setProperty("--background", "url('../wallpaper/" + backgrounds[nBkgd] + "')");
 		backgroundValue = "rotate";
 	} else if (text === "fixed") {
 		let wall = document.getElementById("background-select").value;
-		r.style.setProperty("--background", "url('wallpaper/" + wall + "')");
+		r.style.setProperty("--background", "url('../wallpaper/" + wall + "')");
 		// CHANGE THIS TO FULL URL
 		backgroundValue = "https://skissors.github.io/PetzPark/wallpaper/" + wall;
 	} else if (text === "solid") {
@@ -142,7 +137,7 @@ function updateBackgroundImg(event) {
 	let value = event.target.value;
 
 	if (id === "background-select" && document.getElementById("bk-fixed").checked) {
-		r.style.setProperty("--background", "url('wallpaper/" + value + "')");
+		r.style.setProperty("--background", "url('../wallpaper/" + value + "')");
 		// CHANGE THIS TO FULL URL
 		backgroundValue = "https://skissors.github.io/PetzPark/wallpaper/" + value;
 	} else if (id === "background-url" && document.getElementById("bk-custom").checked && value != "") {
