@@ -223,7 +223,7 @@ petz = [
 	},
 	{
 		name: "Lotus",
-		owner: "Elliot",
+		owner: "Kel",
 		site: "Moth",
 		url: "https://mothbloxcattery.neocities.org/",
 	},
