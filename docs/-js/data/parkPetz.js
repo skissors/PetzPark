@@ -117,7 +117,7 @@ petz = [
 		name: "Spekles",
 		owner: "stancymckatt",
 		site: "StancyMcKatt's Petz",
-		url: "http://smpetz.blogspot.com/",
+		url: "https://smpetz.neocities.org/",
 	},
 	{
 		name: "Goliath",
@@ -198,12 +198,6 @@ petz = [
 		url: "https://thegreenroom.neocities.org/petzcadia/i",
 	},
 	{
-		name: "Lancer",
-		owner: "Nikita",
-		site: "My petz 4 stuff",
-		url: "https://ilovepetz4.neocities.org/",
-	},
-	{
 		name: "Pluey",
 		owner: "Taz",
 		site: "Cat Petterz Central",
@@ -227,10 +221,16 @@ petz = [
 		site: "Moth",
 		url: "https://mothbloxcattery.neocities.org/",
 	},
+	// {
+	// 	name: "Bandit",
+	// 	owner: "Xenon-Starz",
+	// 	site: "Xenon-Starz",
+	// 	url: "https://xenon-starz.neocities.org/",
+	// },
 	{
-		name: "Bandit",
-		owner: "Xenon-Starz",
-		site: "Xenon-Starz",
-		url: "https://xenon-starz.neocities.org/",
+		name: "Lynx",
+		owner: "Melissa",
+		site: "Elfland Woods Kennelz and Cattery",
+		url: "http://www.wintersprite.net/elflandwoods",
 	},
 ];
